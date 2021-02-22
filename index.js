@@ -1,10 +1,14 @@
+// https://juejin.cn/post/6844903743121522701
+import ttttest from './awaitAndAsync'
 window.onload = (args1 = '没有') => {
   const box = document.getElementById('test')
-  const prom = new Promise((resolve, reject) => {
-    resolve()
-  })
+  
+  async function ttttest2() {
+    const testRes = await ttttest()
+  }
   if (box) {
-    box.innerHTML = 'asdfs'
+    const res = [1,2,3].includes(2)
+    box.innerHTML =`asdfs${res.toString()}`
   }else {
     console.warn('没有拿到元素q')
   }
